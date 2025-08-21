@@ -1,20 +1,17 @@
-﻿using KayraExportTask2Application.DTOs.ProductImageDTOs;
+﻿using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KayraExportTask2Application.DTOs.ProductDTOs
+namespace KayraExportTask2Application.Features.Categories.Commands
 {
-    public class ProductDto
+    public class UpdateCategoryCommand : IRequest<bool>
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public decimal Price { get; set; }
         public string Slug { get; set; }
-        public Guid CategoryId { get; set; }
-        public List<ProductImageDto> ProductImages { get; set; }
     }
 }

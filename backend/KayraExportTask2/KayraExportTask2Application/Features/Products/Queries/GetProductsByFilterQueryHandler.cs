@@ -25,7 +25,7 @@ namespace KayraExportTask2Application.Features.Products.Queries
 
         public async Task<List<ProductDto>> Handle(GetProductsByFilterQuery request, CancellationToken cancellationToken)
         {
-            var cacheKey = $"products:filtered:searchText={request.SearchText?.ToLower()}&minPrice={request.MinPrice}&maxPrice={request.MaxPrice}&categoryId={request.CategoryId}";
+            var cacheKey = $"products:filtered:search={request.SearchText?.ToLower()}&minPrice={request.MinPrice}&maxPrice={request.MaxPrice}&categoryId={request.CategoryId}&page={request.PageNumber}&size={request.PageSize}&sort={request.SortBy?.ToLower()}";
 
             var cachedProducts = await _cacheService.GetAsync<List<ProductDto>>(cacheKey);
             if (cachedProducts != null)
@@ -33,7 +33,7 @@ namespace KayraExportTask2Application.Features.Products.Queries
                 return cachedProducts;
             }
 
-            var query = _readRepositories.GetAll();
+            var query = _readRepositories.GetAll().Include(p => p.Images).AsQueryable();
 
             if (!string.IsNullOrEmpty(request.SearchText))
             {
@@ -54,6 +54,27 @@ namespace KayraExportTask2Application.Features.Products.Queries
                 query = query.Where(p => p.CategoryId == request.CategoryId.Value);
             }
 
+            // Sıralama mantığı
+            if (!string.IsNullOrEmpty(request.SortBy))
+            {
+                switch (request.SortBy.ToLowerInvariant())
+                {
+                    case "price_asc":
+                        query = query.OrderBy(p => p.Price);
+                        break;
+                    case "price_desc":
+                        query = query.OrderByDescending(p => p.Price);
+                        break;
+                    default:
+                        query = query.OrderBy(p => p.Name);
+                        break;
+                }
+            }
+            else
+            {
+                query = query.OrderBy(p => p.Price);
+            }
+
             var products = await query.Skip((request.PageNumber - 1) * request.PageSize)
                                       .Take(request.PageSize)
                                       .ToListAsync(cancellationToken);
@@ -65,13 +86,13 @@ namespace KayraExportTask2Application.Features.Products.Queries
                 Price = p.Price,
                 Description = p.Description,
                 Slug = p.Slug,
+                CategoryId = p.CategoryId
             }).ToList();
 
-            //Save Redis
+            // Save Redis
             await _cacheService.SetAsync(cacheKey, productDtos, TimeSpan.FromMinutes(10));
 
             return productDtos;
         }
-        
     }
 }

@@ -40,9 +40,11 @@ namespace KayraExportTask2Application.Features.Products.Commands
             productToUpdate.CategoryId = request.CategoryId;
             productToUpdate.UpdatedTime = DateTime.UtcNow;
 
-            _writeRepositories.Update(productToUpdate);
             await _cacheService.RemoveAsync($"product:{request.Id}");
             await _cacheService.RemoveAsync("allproducts");
+            _writeRepositories.Update(productToUpdate);
+            await _writeRepositories.SaveAsync();
+
 
             return true;
         }

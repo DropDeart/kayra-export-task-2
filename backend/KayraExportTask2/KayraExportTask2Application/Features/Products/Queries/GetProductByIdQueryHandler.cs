@@ -4,6 +4,7 @@ using KayraExportTask2Application.Repositories;
 using KayraExportTask2Domain.Configurations;
 using KayraExportTask2Domain.Entities;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,9 +33,13 @@ namespace KayraExportTask2Application.Features.Products.Queries
                 return cachedProduct;
             }
 
-            var product = await _readRepositories.GetByIdAsync(query.Id.ToString());
+            
+            var products = _readRepositories.GetAll();
+            
+            var product = await products.Include(p => p.Images)
+                                     .FirstOrDefaultAsync(p => p.Id == query.Id, cancellationToken);
 
-            if(product == null)
+            if (product == null)
             {
                 throw new NotFoundException($"Ürün bulunamadı. Id : {query.Id}");
             }

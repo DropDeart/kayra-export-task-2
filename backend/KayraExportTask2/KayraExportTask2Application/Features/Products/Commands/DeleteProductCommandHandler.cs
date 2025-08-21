@@ -33,9 +33,11 @@ namespace KayraExportTask2Application.Features.Products.Commands
                 throw new NotFoundException($"Ürün bulunamadı. Id : {request.Id}");
             }
 
-            _writeRepositories.Remove(product);
             await _cacheService.RemoveAsync($"product:{request.Id}");
             await _cacheService.RemoveAsync("allproducts");
+            _writeRepositories.Remove(product);
+            await _writeRepositories.SaveAsync();
+            
 
             return true;
         }

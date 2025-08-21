@@ -34,7 +34,7 @@ namespace KayraExportTask2Application.Features.Products.Queries
                 return cachedProducts;
             }
 
-            var products = await _readRepositories.GetAll().ToListAsync(cancellationToken);
+            var products = _readRepositories.GetAll().Include(p => p.Images).AsQueryable();
 
             var productDtos = products.Select(p => new ProductDto
             {

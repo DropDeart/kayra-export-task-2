@@ -9,15 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructor", "Infrastruc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{DA8AFE9B-F635-4489-A73D-783FEE4D3333}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayraExportTask2Domain", "KayraExportTask2Domain\KayraExportTask2Domain.csproj", "{177DA350-E3D9-4288-8FF0-74F2B36759A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KayraExportTask2Domain", "KayraExportTask2Domain\KayraExportTask2Domain.csproj", "{177DA350-E3D9-4288-8FF0-74F2B36759A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayraExportTask2Application", "KayraExportTask2Application\KayraExportTask2Application.csproj", "{3D701E27-2D0A-425E-AF6B-C4AFABC9AC64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KayraExportTask2Application", "KayraExportTask2Application\KayraExportTask2Application.csproj", "{3D701E27-2D0A-425E-AF6B-C4AFABC9AC64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayraExportTask2Infrastructor", "KayraExportTask2Infrastructor\KayraExportTask2Infrastructor.csproj", "{5C406369-9F55-4B73-9658-20F1A27A9042}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KayraExportTask2Infrastructor", "KayraExportTask2Infrastructor\KayraExportTask2Infrastructor.csproj", "{5C406369-9F55-4B73-9658-20F1A27A9042}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayraExportTask2Persistance", "KayraExportTask2Persistance\KayraExportTask2Persistance.csproj", "{4EBE7FF3-6E17-4AD4-8A4C-03898061854E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KayraExportTask2Persistance", "KayraExportTask2Persistance\KayraExportTask2Persistance.csproj", "{4EBE7FF3-6E17-4AD4-8A4C-03898061854E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayraExportTask2API", "KayraExportTask2API\KayraExportTask2API.csproj", "{501D3084-66B0-451B-8C3C-F299C1533A8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KayraExportTask2API", "KayraExportTask2API\KayraExportTask2API.csproj", "{501D3084-66B0-451B-8C3C-F299C1533A8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

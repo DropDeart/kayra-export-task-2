@@ -14,4 +14,9 @@
     <ProjectReference Include="..\KayraExportTask2Domain\KayraExportTask2Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Auth\Commands\" />
+    <Folder Include="Features\Auth\Queries\" />
+  </ItemGroup>
+
 </Project>

@@ -11,5 +11,6 @@ namespace KayraExportTask2Domain.Enums
         InternalServerError = 5000,
         WrongEmailAndPassword = 1001,
         EmailAlreadyExist = 1002,
+        NotFound = 1003
     }
 }

@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: kayra-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: KayraTaskDb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 112233
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:latest
+    container_name: kayra-export-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres-data:

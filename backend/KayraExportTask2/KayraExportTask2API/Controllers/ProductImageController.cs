@@ -1,5 +1,6 @@
 ﻿using KayraExportTask2Application.DTOs.ProductImageDTOs;
 using KayraExportTask2Application.Features.Productİmages.Commands;
+using KayraExportTask2Application.Features.Productİmages.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -15,6 +16,21 @@ namespace KayraExportTask2API.Controllers
         public ProductImageController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet("api/GetProductImages/{productId}")]
+        public async Task<ActionResult<List<ProductImageDto>>> GetProductImages(Guid productId)
+        {
+            var images = await _mediator.Send(new GetProductImagesQuery { Id = productId });
+
+            var requestUrl = $"{Request.Scheme}://{Request.Host}";
+
+            foreach (var image in images)
+            {
+                image.FilePath = requestUrl + image.FilePath;
+            }
+
+            return Ok(images);
         }
 
         [HttpPost("api/products/{productId}/images")]

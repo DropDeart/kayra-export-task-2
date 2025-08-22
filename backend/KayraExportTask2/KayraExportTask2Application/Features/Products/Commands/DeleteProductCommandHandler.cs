@@ -34,7 +34,7 @@ namespace KayraExportTask2Application.Features.Products.Commands
             }
 
             await _cacheService.RemoveAsync($"product:{request.Id}");
-            await _cacheService.RemoveAsync("allproducts");
+            await _cacheService.RemoveAllAsync("products:filtered");
             _writeRepositories.Remove(product);
             await _writeRepositories.SaveAsync();
             

@@ -15,11 +15,11 @@ namespace KayraExportTask2Infrastructor.Services
     public class CacheService : ICacheService
     {
         private readonly IDatabase _cacheDb;
+        private readonly IConnectionMultiplexer _redis;
 
-        public CacheService(IConfiguration configuration)
+        public CacheService(IConnectionMultiplexer redis)
         {
-            var connectionString = configuration.GetConnectionString("Redis");
-            var redis = ConnectionMultiplexer.Connect(connectionString);
+            _redis = redis; 
             _cacheDb = redis.GetDatabase();
         }
 
@@ -42,6 +42,12 @@ namespace KayraExportTask2Infrastructor.Services
         public async Task RemoveAsync(string key)
         {
             await _cacheDb.KeyDeleteAsync(key);
+        }
+
+        public async Task RemoveAllAsync(string pattern)
+        {
+            var keys = _redis.GetServer(_redis.GetEndPoints().First()).Keys(pattern: $"*{pattern}*").ToArray();
+            await _redis.GetDatabase().KeyDeleteAsync(keys);
         }
     }
 }

@@ -34,7 +34,7 @@ namespace KayraExportTask2Application.Features.Products.Commands
                 CreatedTime = DateTime.UtcNow
             };
 
-            await _cacheService.RemoveAsync("allproducts");
+            await _cacheService.RemoveAsync("products:filtered");
 
             await _productWriteRepository.AddAsync(newProduct);
             await _productWriteRepository.SaveAsync();

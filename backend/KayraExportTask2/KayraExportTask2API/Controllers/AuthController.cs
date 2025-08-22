@@ -1,5 +1,6 @@
 ﻿using KayraExportTask2Application.DTOs.AuthDTOs;
 using KayraExportTask2Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

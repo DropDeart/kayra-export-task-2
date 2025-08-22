@@ -10,5 +10,6 @@ namespace KayraExportTask2Application.DTOs.AuthDTOs
     {
         public string AccessToken { get; set; } = string.Empty;
         public DateTime Expiration { get; set; }
+        public UserLoginDto User { get; set; }
     }
 }

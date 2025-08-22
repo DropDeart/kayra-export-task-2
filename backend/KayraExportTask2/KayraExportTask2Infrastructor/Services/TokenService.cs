@@ -51,7 +51,15 @@ namespace KayraExportTask2Infrastructor.Services
             return new LoginResponseDto
             {
                 AccessToken = tokenHandler.WriteToken(token),
-                Expiration = expiration
+                Expiration = expiration,
+                User = new UserLoginDto
+                {
+                    Id = user.Id,
+                    Name = user.Name,
+                    Email = user.Email,
+                    Role = user.Role.ToString()
+                }
+                
             };
         }
     }

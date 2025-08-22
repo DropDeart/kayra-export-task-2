@@ -39,7 +39,7 @@ namespace KayraExportTask2Infrastructor.Services
                 Name = registerDto.Name,
                 Email = registerDto.Email,
                 PasswordHash = hashedPassword,
-                Role = UserRole.User,
+                Role = registerDto.Role,
                 IsEmainConfirmed = true
             };
 

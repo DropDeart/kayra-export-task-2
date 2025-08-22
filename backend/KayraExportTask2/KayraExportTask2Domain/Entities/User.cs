@@ -14,8 +14,8 @@ namespace KayraExportTask2Domain.Entities
         public string Email { get; set; }
         public string PasswordHash { get; set; }
         public string? PhoneNumber {  get; set; }
-        public UserRole Role { get; set; } = UserRole.User;
-        
+        public UserRole Role { get; set; } 
+
         // İlerleyen süreçlerde email verification tanımlanabilir.
         public bool IsEmainConfirmed { get; set; } = true;
 

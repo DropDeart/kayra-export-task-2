@@ -12,6 +12,6 @@ namespace KayraExportTask2Application.Features.Productİmages.Commands
     public class AddProductImageCommand : IRequest<bool>
     {
         public Guid ProductId { get; set; }
-        public IFormFile File { get; set; }
+        public List<IFormFile> Files { get; set; }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using KayraExportTask2Application.Features.Categories;
 using KayraExportTask2Application.Features.Categories.Commands;
+using KayraExportTask2Application.Features.Categories.Queries;
 using KayraExportTask2Application.Features.Products.Commands;
+using KayraExportTask2Application.Features.Products.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +18,13 @@ namespace KayraExportTask2API.Controllers
         public CategoryController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllCategories()
+        {
+            var products = await _mediator.Send(new GetCategoriesQuery());
+            return Ok(products);
         }
 
         [HttpPost]

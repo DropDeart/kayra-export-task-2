@@ -45,27 +45,33 @@ namespace KayraExportTask2Application.Features.Productİmages.Commands
                 Directory.CreateDirectory(uploadsFolder);
             }
 
-            var uniqueFileName = Guid.NewGuid().ToString() + "_" + request.File.FileName;
-            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+            var productImages = new List<ProductImage>();
 
-            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            foreach (var file in request.Files)
             {
-                await request.File.CopyToAsync(fileStream);
+                var uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(fileStream, cancellationToken);
+                }
+
+                var productImage = new ProductImage
+                {
+                    ProductId = request.ProductId,
+                    FileName = file.FileName,
+                    FileExtension = Path.GetExtension(file.FileName),
+                    FileSizeInBytes = file.Length,
+                    FilePath = "/images/" + uniqueFileName,
+                    IsMain = false
+                };
+
+                productImages.Add(productImage);
             }
 
-            var productImage = new ProductImage
-            {
-                FileName = request.File.FileName,
-                FileExtension = Path.GetExtension(request.File.FileName),
-                FileSizeInBytes = request.File.Length,
-                FilePath = "/images/" + uniqueFileName,
-                ProductId = request.ProductId,
-                IsMain = false,
-            };
-
-            await _writeRepositories.AddAsync(productImage);
+            await _writeRepositories.AddRangeAsync(productImages);
             await _writeRepositories.SaveAsync();
-            
             await _cacheService.RemoveAsync("allproducts");
 
             return true;

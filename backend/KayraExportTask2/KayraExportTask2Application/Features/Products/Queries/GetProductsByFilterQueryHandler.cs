@@ -1,4 +1,5 @@
 ﻿using KayraExportTask2Application.DTOs.ProductDTOs;
+using KayraExportTask2Application.DTOs.ProductImageDTOs;
 using KayraExportTask2Application.Interfaces;
 using KayraExportTask2Application.Repositories;
 using KayraExportTask2Domain.Entities;
@@ -86,7 +87,16 @@ namespace KayraExportTask2Application.Features.Products.Queries
                 Price = p.Price,
                 Description = p.Description,
                 Slug = p.Slug,
-                CategoryId = p.CategoryId
+                CategoryId = p.CategoryId,
+                ProductImages = p.Images != null
+                ? p.Images.Select(pi => new ProductImageDto
+                {
+                    Id = pi.Id,
+                    FileName = pi.FileName,
+                    FilePath = pi.FilePath,
+                    IsMain = pi.IsMain
+                }).ToList()
+                : new List<ProductImageDto>()
             }).ToList();
 
             // Save Redis

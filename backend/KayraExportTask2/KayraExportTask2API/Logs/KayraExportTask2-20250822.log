@@ -1,0 +1,35 @@
+2025-08-22 09:33:11.331 +03:00 [INF] HTTP POST /api/Auth/login responded 200 in 1941.1930 ms
+2025-08-22 09:33:38.955 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 09:33:39.320 +03:00 [INF] HTTP GET /api/Product responded 200 in 369.9903 ms
+2025-08-22 09:36:30.640 +03:00 [INF] HTTP POST /api/ProductImage responded 400 in 26.6717 ms
+2025-08-22 09:39:23.038 +03:00 [INF] HTTP POST /api/products/{0dabbe6f-5061-46ac-81da-5888df2836a2}/images responded 404 in 0.0924 ms
+2025-08-22 09:41:05.551 +03:00 [INF] HTTP POST /api/products/{0dabbe6f-5061-46ac-81da-5888df2836a2}/images responded 404 in 0.0072 ms
+2025-08-22 09:43:37.265 +03:00 [INF] HTTP POST /api/products/{0dabbe6f-5061-46ac-81da-5888df2836a2}/images responded 404 in 0.0058 ms
+2025-08-22 09:46:16.805 +03:00 [INF] HTTP POST /api/products/{0dabbe6f-5061-46ac-81da-5888df2836a2}/images responded 404 in 0.0393 ms
+2025-08-22 09:49:34.184 +03:00 [INF] HTTP POST /api/Auth/login responded 200 in 1096.5562 ms
+2025-08-22 09:49:45.746 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 09:49:45.962 +03:00 [INF] HTTP GET /api/Product responded 200 in 221.5658 ms
+2025-08-22 09:49:59.223 +03:00 [INF] HTTP POST /api/ProductImage responded 400 in 67.8619 ms
+2025-08-22 09:51:41.285 +03:00 [INF] HTTP POST /api/ProductImage responded 400 in 57457.7897 ms
+2025-08-22 09:53:39.183 +03:00 [INF] HTTP POST /api/Auth/login responded 200 in 1128.2084 ms
+2025-08-22 09:53:50.108 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 09:53:50.278 +03:00 [INF] HTTP GET /api/Product responded 200 in 176.2948 ms
+2025-08-22 09:54:05.333 +03:00 [INF] HTTP POST /api/products/0dabbe6f-5061-46ac-81da-5888df2836a2/images responded 200 in 311.8665 ms
+2025-08-22 09:54:38.853 +03:00 [INF] HTTP POST /api/Auth/login responded 200 in 1081.9275 ms
+2025-08-22 09:55:06.159 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 09:55:36.804 +03:00 [INF] HTTP GET /api/Product responded 200 in 30651.1543 ms
+2025-08-22 09:56:45.803 +03:00 [INF] HTTP GET /api/Product responded 200 in 55493.1866 ms
+2025-08-22 10:01:46.670 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 3047.9854 ms
+2025-08-22 10:09:49.294 +03:00 [INF] HTTP POST /api/Auth/login responded 200 in 1079.6931 ms
+2025-08-22 10:10:06.137 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 10:10:09.677 +03:00 [INF] HTTP GET /api/Product responded 200 in 3546.4478 ms
+2025-08-22 10:10:18.268 +03:00 [INF] HTTP GET /api/Product responded 200 in 1503.2844 ms
+2025-08-22 10:11:18.277 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-08-22 10:12:04.696 +03:00 [INF] HTTP GET /api/Product responded 200 in 91627.1497 ms
+2025-08-22 10:12:28.060 +03:00 [INF] HTTP GET /api/Product responded 200 in 11812.9100 ms
+2025-08-22 10:15:35.639 +03:00 [INF] HTTP POST /api/Auth/login responded 200 in 156.9487 ms
+2025-08-22 10:15:47.389 +03:00 [INF] HTTP PUT /api/products/0dabbe6f-5061-46ac-81da-5888df2836a2/images/e68e8251-227e-44d9-889d-07b952acf378/set-main responded 200 in 2173.2164 ms
+2025-08-22 10:16:12.346 +03:00 [INF] HTTP DELETE /api/products/0dabbe6f-5061-46ac-81da-5888df2836a2/images/e68e8251-227e-44d9-889d-07b952acf378 responded 204 in 34.8784 ms
+2025-08-22 10:16:40.468 +03:00 [INF] HTTP GET /api/Product responded 200 in 6139.2823 ms
+2025-08-22 10:24:08.526 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 10:24:09.486 +03:00 [INF] HTTP GET /api/Category responded 200 in 976.2554 ms

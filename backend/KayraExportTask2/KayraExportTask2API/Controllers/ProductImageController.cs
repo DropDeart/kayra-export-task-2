@@ -1,4 +1,5 @@
-﻿using KayraExportTask2Application.Features.Productİmages.Commands;
+﻿using KayraExportTask2Application.DTOs.ProductImageDTOs;
+using KayraExportTask2Application.Features.Productİmages.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -6,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace KayraExportTask2API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class ProductImageController : ControllerBase
     {
@@ -17,15 +17,15 @@ namespace KayraExportTask2API.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost]
+        [HttpPost("api/products/{productId}/images")]
         [Consumes("multipart/form-data")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> AddProductImage([FromRoute] Guid productId, [FromForm] IFormFile file)
+        public async Task<IActionResult> AddProductImage([FromRoute] Guid productId, [FromForm] ProductImageUploadRequest request)
         {
             var command = new AddProductImageCommand
             {
                 ProductId = productId,
-                File = file
+                Files = request.Files
             };
 
             var result = await _mediator.Send(command);
@@ -36,9 +36,9 @@ namespace KayraExportTask2API.Controllers
             return Ok(result);
         }
 
-        [HttpDelete("{imageId}")]
+        [HttpDelete("api/products/{productId}/images/{imageId}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> DeleteProductImage([FromRoute] Guid imageId)
+        public async Task<IActionResult> DeleteProductImage([FromRoute] Guid productId, [FromRoute] Guid imageId)
         {
             var command = new DeleteProductImageCommand { ImageId = imageId };
             var result = await _mediator.Send(command);
@@ -50,7 +50,7 @@ namespace KayraExportTask2API.Controllers
             return NoContent();
         }
 
-        [HttpPut("{imageId}/set-main")]
+        [HttpPut("api/products/{productId}/images/{imageId}/set-main")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> SetMainImage([FromRoute] Guid productId, [FromRoute] Guid imageId)
         {

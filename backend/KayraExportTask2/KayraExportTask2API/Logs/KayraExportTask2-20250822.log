@@ -40,3 +40,350 @@
 2025-08-22 18:51:50.648 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 3067.7438 ms
 2025-08-22 18:55:29.514 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 332.7552 ms
 2025-08-22 19:02:13.284 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 244.2357 ms
+2025-08-22 19:35:38.364 +03:00 [INF] HTTP POST /api/auth/register responded 400 in 233.3689 ms
+2025-08-22 19:37:37.211 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 1024.8181 ms
+2025-08-22 19:37:44.919 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 284.9733 ms
+2025-08-22 19:38:11.673 +03:00 [ERR] HTTP POST /api/auth/register responded 500 in 246.5760 ms
+KayraExportTask2Domain.Configurations.CustomException: Bu email adresi zaten kullanılıyor.
+   at KayraExportTask2Infrastructor.Services.AuthService.Register(LoginRegisterDto registerDto) in C:\Users\Furkan Recep Çınar\source\repos\kayra-export-task-2\backend\KayraExportTask2\KayraExportTask2Infrastructor\Services\AuthService.cs:line 31
+   at KayraExportTask2API.Controllers.AuthController.Register(LoginRegisterDto registerDto) in C:\Users\Furkan Recep Çınar\source\repos\kayra-export-task-2\backend\KayraExportTask2\KayraExportTask2API\Controllers\AuthController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-08-22 19:38:11.860 +03:00 [ERR] An error occurred.
+KayraExportTask2Domain.Configurations.CustomException: Bu email adresi zaten kullanılıyor.
+   at KayraExportTask2Infrastructor.Services.AuthService.Register(LoginRegisterDto registerDto) in C:\Users\Furkan Recep Çınar\source\repos\kayra-export-task-2\backend\KayraExportTask2\KayraExportTask2Infrastructor\Services\AuthService.cs:line 31
+   at KayraExportTask2API.Controllers.AuthController.Register(LoginRegisterDto registerDto) in C:\Users\Furkan Recep Çınar\source\repos\kayra-export-task-2\backend\KayraExportTask2\KayraExportTask2API\Controllers\AuthController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at KayraExportTask2API.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Furkan Recep Çınar\source\repos\kayra-export-task-2\backend\KayraExportTask2\KayraExportTask2API\Middlewares\ExceptionHandlerMiddleware.cs:line 23
+2025-08-22 19:38:39.624 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 140.2385 ms
+2025-08-22 19:39:27.616 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 19169.8064 ms
+2025-08-22 19:39:47.436 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 1638.9271 ms
+2025-08-22 19:40:14.967 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 1309.5872 ms
+2025-08-22 19:45:51.983 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 2125.6095 ms
+2025-08-22 19:45:59.823 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 139.2372 ms
+2025-08-22 19:49:40.323 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 141.9207 ms
+2025-08-22 20:12:39.311 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 235.0686 ms
+2025-08-22 20:19:28.815 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 174.7120 ms
+2025-08-22 20:22:03.365 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 173.9140 ms
+2025-08-22 20:23:54.700 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 138.4614 ms
+2025-08-22 20:25:58.268 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 170.9745 ms
+2025-08-22 20:29:24.897 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 141.0799 ms
+2025-08-22 20:30:47.906 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 136.9465 ms
+2025-08-22 20:34:54.230 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 164.8771 ms
+2025-08-22 20:46:03.009 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 314.8632 ms
+2025-08-22 20:50:31.169 +03:00 [INF] HTTP POST /api/Auth/login responded 200 in 133.0589 ms
+2025-08-22 20:51:45.180 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 165.8538 ms
+2025-08-22 20:53:40.307 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 142.5636 ms
+2025-08-22 21:10:04.807 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 21:10:15.516 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-08-22 21:10:15.617 +03:00 [INF] HTTP GET /api/Product responded 200 in 10884.2339 ms
+2025-08-22 21:35:44.962 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 250.2282 ms
+2025-08-22 21:40:05.732 +03:00 [INF] HTTP GET /api/Category/GetAllCategories responded 405 in 3.2587 ms
+2025-08-22 21:40:05.732 +03:00 [INF] HTTP GET /api/Category/GetAllCategories responded 405 in 3.3766 ms
+2025-08-22 21:41:37.435 +03:00 [INF] HTTP GET /api/Product responded 200 in 106.8012 ms
+2025-08-22 21:41:37.438 +03:00 [INF] HTTP GET /api/Product responded 200 in 91709.8256 ms
+2025-08-22 21:41:37.438 +03:00 [INF] HTTP GET /api/Product responded 200 in 91709.9038 ms
+2025-08-22 21:41:43.494 +03:00 [INF] HTTP GET /api/Category/GetAllCategories responded 405 in 0.0380 ms
+2025-08-22 21:41:43.499 +03:00 [INF] HTTP GET /api/Category/GetAllCategories responded 405 in 0.0096 ms
+2025-08-22 21:41:43.513 +03:00 [INF] HTTP GET /api/Product responded 200 in 19.4230 ms
+2025-08-22 21:41:43.524 +03:00 [INF] HTTP GET /api/Product responded 200 in 7.8569 ms
+2025-08-22 21:42:00.511 +03:00 [INF] HTTP GET /api/Category/GetAllCategories responded 405 in 0.0191 ms
+2025-08-22 21:42:00.514 +03:00 [INF] HTTP GET /api/Category/GetAllCategories responded 405 in 0.0052 ms
+2025-08-22 21:42:00.531 +03:00 [INF] HTTP GET /api/Product responded 200 in 19.2350 ms
+2025-08-22 21:42:00.536 +03:00 [INF] HTTP GET /api/Product responded 200 in 21.6499 ms
+2025-08-22 21:42:31.601 +03:00 [INF] HTTP GET /api/Product responded 200 in 11.9093 ms
+2025-08-22 21:42:31.615 +03:00 [INF] HTTP GET /api/Product responded 200 in 12.2856 ms
+2025-08-22 21:42:31.670 +03:00 [INF] HTTP GET /api/Category responded 200 in 81.5138 ms
+2025-08-22 21:42:31.682 +03:00 [INF] HTTP GET /api/Category responded 200 in 9.7057 ms
+2025-08-22 21:42:37.174 +03:00 [INF] HTTP GET /api/Product responded 200 in 10.0514 ms
+2025-08-22 21:42:37.177 +03:00 [INF] HTTP GET /api/Category responded 200 in 12.5563 ms
+2025-08-22 21:44:18.074 +03:00 [INF] HTTP GET /api/Category/GetAllCategories responded 405 in 0.0129 ms
+2025-08-22 21:44:18.079 +03:00 [INF] HTTP GET /api/Category/GetAllCategories responded 405 in 0.0168 ms
+2025-08-22 21:44:18.155 +03:00 [INF] HTTP GET /api/Product responded 200 in 81.2233 ms
+2025-08-22 21:44:18.157 +03:00 [INF] HTTP GET /api/Product responded 200 in 83.2843 ms
+2025-08-22 21:48:37.899 +03:00 [INF] HTTP GET /api/Category responded 200 in 11.7484 ms
+2025-08-22 21:48:37.903 +03:00 [INF] HTTP GET /api/Product responded 200 in 15.2615 ms
+2025-08-22 21:48:37.918 +03:00 [INF] HTTP GET /api/Product responded 200 in 13.3979 ms
+2025-08-22 21:48:37.919 +03:00 [INF] HTTP GET /api/Category responded 200 in 15.7588 ms
+2025-08-22 21:50:12.293 +03:00 [INF] HTTP GET /api/Category responded 200 in 50.7915 ms
+2025-08-22 21:50:12.296 +03:00 [INF] HTTP GET /api/Product responded 200 in 26.5608 ms
+2025-08-22 21:50:12.318 +03:00 [INF] HTTP GET /api/Product responded 200 in 17.4254 ms
+2025-08-22 21:50:12.324 +03:00 [INF] HTTP GET /api/Category responded 200 in 26.3424 ms
+2025-08-22 21:50:39.788 +03:00 [INF] HTTP GET /api/Product responded 200 in 15.6566 ms
+2025-08-22 21:50:39.788 +03:00 [INF] HTTP GET /api/Category responded 200 in 15.7804 ms
+2025-08-22 21:50:39.840 +03:00 [INF] HTTP GET /api/Category responded 200 in 50.0792 ms
+2025-08-22 21:50:39.840 +03:00 [INF] HTTP GET /api/Product responded 200 in 50.2753 ms
+2025-08-22 21:53:22.522 +03:00 [INF] HTTP GET /api/Category responded 200 in 51.0730 ms
+2025-08-22 21:53:22.522 +03:00 [INF] HTTP GET /api/Product responded 200 in 51.6482 ms
+2025-08-22 21:53:22.556 +03:00 [INF] HTTP GET /api/Category responded 200 in 24.7702 ms
+2025-08-22 21:53:22.630 +03:00 [INF] HTTP GET /api/Product responded 200 in 98.4514 ms
+2025-08-22 21:54:20.299 +03:00 [INF] HTTP GET /api/Product responded 200 in 19.0650 ms
+2025-08-22 21:54:20.304 +03:00 [INF] HTTP GET /api/Category responded 200 in 24.5027 ms
+2025-08-22 21:54:20.317 +03:00 [INF] HTTP GET /api/Product responded 200 in 16.8444 ms
+2025-08-22 21:54:20.321 +03:00 [INF] HTTP GET /api/Category responded 200 in 12.2780 ms
+2025-08-22 21:57:48.517 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 188.7039 ms
+2025-08-22 21:57:48.530 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 11.0782 ms
+2025-08-22 21:57:48.542 +03:00 [INF] HTTP GET /api/Category responded 200 in 14.7734 ms
+2025-08-22 21:57:48.553 +03:00 [INF] HTTP GET /api/Category responded 200 in 8.5981 ms
+2025-08-22 21:59:44.703 +03:00 [INF] HTTP GET /api/Category responded 200 in 17.3994 ms
+2025-08-22 21:59:44.705 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 20.2447 ms
+2025-08-22 21:59:44.720 +03:00 [INF] HTTP GET /api/Category responded 200 in 14.7916 ms
+2025-08-22 21:59:44.721 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 15.1416 ms
+2025-08-22 21:59:45.192 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 14.4055 ms
+2025-08-22 21:59:45.192 +03:00 [INF] HTTP GET /api/Category responded 200 in 14.4349 ms
+2025-08-22 22:00:53.333 +03:00 [INF] HTTP GET /api/Category responded 200 in 28.0819 ms
+2025-08-22 22:00:53.363 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 58.4994 ms
+2025-08-22 22:00:55.934 +03:00 [INF] HTTP GET /api/Category responded 200 in 24.8102 ms
+2025-08-22 22:00:55.947 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 33.5208 ms
+2025-08-22 22:00:57.887 +03:00 [INF] HTTP GET /api/Category responded 200 in 19.9183 ms
+2025-08-22 22:00:57.891 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 22.4397 ms
+2025-08-22 22:00:59.691 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 20.5796 ms
+2025-08-22 22:00:59.694 +03:00 [INF] HTTP GET /api/Category responded 200 in 21.5980 ms
+2025-08-22 22:01:20.362 +03:00 [INF] HTTP GET /api/Category responded 200 in 10.1460 ms
+2025-08-22 22:01:20.363 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 11.3810 ms
+2025-08-22 22:02:15.995 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 16.4775 ms
+2025-08-22 22:02:15.996 +03:00 [INF] HTTP GET /api/Category responded 200 in 18.2862 ms
+2025-08-22 22:02:51.437 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 101.9829 ms
+2025-08-22 22:02:51.438 +03:00 [INF] HTTP GET /api/Category responded 200 in 103.2134 ms
+2025-08-22 22:05:30.850 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2/images responded 404 in 0.4304 ms
+2025-08-22 22:05:30.850 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2/images responded 404 in 0.2492 ms
+2025-08-22 22:07:38.986 +03:00 [INF] HTTP GET /api/products/0dabbe6f-5061-46ac-81da-5888df2836a2/images responded 405 in 0.4123 ms
+2025-08-22 22:07:38.987 +03:00 [INF] HTTP GET /api/products/0dabbe6f-5061-46ac-81da-5888df2836a2/images responded 405 in 0.0055 ms
+2025-08-22 22:07:59.121 +03:00 [INF] HTTP GET /api/products/0dabbe6f-5061-46ac-81da-5888df2836a2/images responded 405 in 0.0081 ms
+2025-08-22 22:07:59.125 +03:00 [INF] HTTP GET /api/products/0dabbe6f-5061-46ac-81da-5888df2836a2/images responded 405 in 0.0074 ms
+2025-08-22 22:10:33.579 +03:00 [INF] HTTP GET /api/Category responded 200 in 23.5805 ms
+2025-08-22 22:10:33.630 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 74.2434 ms
+2025-08-22 22:12:52.272 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 51.3226 ms
+2025-08-22 22:12:52.278 +03:00 [INF] HTTP GET /api/Category responded 200 in 57.4575 ms
+2025-08-22 22:14:56.780 +03:00 [INF] HTTP GET /api/Category responded 200 in 28.7431 ms
+2025-08-22 22:14:56.780 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 28.3785 ms
+2025-08-22 22:24:17.246 +03:00 [INF] HTTP GET /api/Category responded 200 in 26.1575 ms
+2025-08-22 22:24:17.324 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 104.4471 ms
+2025-08-22 22:25:23.118 +03:00 [INF] HTTP GET /api/Category responded 200 in 16.0928 ms
+2025-08-22 22:25:23.121 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 19.1793 ms
+2025-08-22 22:26:10.347 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 14.7661 ms
+2025-08-22 22:28:50.117 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 25.8589 ms
+2025-08-22 22:28:50.129 +03:00 [INF] HTTP GET /api/Category responded 200 in 37.5885 ms
+2025-08-22 22:31:24.444 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 61.4989 ms
+2025-08-22 22:31:24.460 +03:00 [INF] HTTP GET /api/Category responded 200 in 76.8899 ms
+2025-08-22 22:31:24.467 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 84.1049 ms
+2025-08-22 22:31:24.467 +03:00 [INF] HTTP GET /api/Category responded 200 in 48.3711 ms
+2025-08-22 22:31:24.887 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 10.8772 ms
+2025-08-22 22:31:24.890 +03:00 [INF] HTTP GET /api/Category responded 200 in 13.3569 ms
+2025-08-22 22:35:31.310 +03:00 [INF] HTTP GET /api/Category responded 200 in 29.4223 ms
+2025-08-22 22:35:31.379 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 98.2062 ms
+2025-08-22 22:35:31.876 +03:00 [INF] HTTP GET /api/Category responded 200 in 18.0876 ms
+2025-08-22 22:35:31.877 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 18.9126 ms
+2025-08-22 22:35:35.867 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 124.1419 ms
+2025-08-22 22:36:31.771 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 12.7271 ms
+2025-08-22 22:37:47.731 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 17.7525 ms
+2025-08-22 22:37:51.760 +03:00 [INF] HTTP POST /api/ProductImage responded 404 in 0.3217 ms
+2025-08-22 22:38:02.990 +03:00 [INF] HTTP POST /api/ProductImage responded 404 in 0.0088 ms
+2025-08-22 22:38:35.874 +03:00 [INF] HTTP POST /api/ProductImage responded 404 in 0.0071 ms
+2025-08-22 22:39:42.069 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 24.3188 ms
+2025-08-22 22:39:42.069 +03:00 [INF] HTTP GET /api/Category responded 200 in 24.4645 ms
+2025-08-22 22:39:43.468 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 10.9669 ms
+2025-08-22 22:40:34.853 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 16.4559 ms
+2025-08-22 22:42:10.911 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 15.0666 ms
+2025-08-22 22:45:15.863 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 15.1006 ms
+2025-08-22 22:45:19.817 +03:00 [INF] HTTP POST /api/products/0dabbe6f-5061-46ac-81da-5888df2836a2/images responded 400 in 130.9911 ms
+2025-08-22 22:47:29.590 +03:00 [INF] HTTP POST /api/products/0dabbe6f-5061-46ac-81da-5888df2836a2/images responded 200 in 304.4136 ms
+2025-08-22 22:47:41.437 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 50.2872 ms
+2025-08-22 22:47:41.461 +03:00 [INF] HTTP GET /api/Category responded 200 in 95.3693 ms
+2025-08-22 22:47:42.765 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 9.4615 ms
+2025-08-22 22:49:09.860 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 25.3896 ms
+2025-08-22 22:49:18.811 +03:00 [INF] HTTP GET /api/Product responded 200 in 15.8163 ms
+2025-08-22 22:53:33.289 +03:00 [INF] HTTP GET /api/Category responded 200 in 22.4885 ms
+2025-08-22 22:53:33.290 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 20.9057 ms
+2025-08-22 22:53:57.175 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 186.0217 ms
+2025-08-22 22:55:32.526 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 48.8343 ms
+2025-08-22 22:55:32.526 +03:00 [INF] HTTP GET /api/Category responded 200 in 48.5776 ms
+2025-08-22 22:55:35.354 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 13.3094 ms
+2025-08-22 22:56:11.544 +03:00 [INF] HTTP GET /api/Category responded 200 in 21.3310 ms
+2025-08-22 22:56:11.567 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 43.7731 ms
+2025-08-22 22:56:31.509 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 79.0788 ms
+2025-08-22 22:56:31.534 +03:00 [INF] HTTP GET /api/Category responded 200 in 104.2500 ms
+2025-08-22 22:56:59.059 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 9.5865 ms
+2025-08-22 22:59:50.904 +03:00 [INF] HTTP GET /api/Category responded 200 in 22.0789 ms
+2025-08-22 22:59:51.079 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 197.1225 ms
+2025-08-22 23:00:54.709 +03:00 [INF] HTTP GET /api/Category responded 200 in 27.5959 ms
+2025-08-22 23:00:54.711 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 30.1220 ms
+2025-08-22 23:00:57.424 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 12.7596 ms
+2025-08-22 23:01:13.461 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 7.5741 ms
+2025-08-22 23:06:27.607 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 39.4280 ms
+2025-08-22 23:17:27.899 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:17:30.505 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-08-22 23:17:30.955 +03:00 [INF] HTTP GET /api/Product responded 200 in 3081.1083 ms
+2025-08-22 23:17:40.017 +03:00 [INF] HTTP GET /GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 196.4222 ms
+2025-08-22 23:17:52.728 +03:00 [INF] HTTP GET /GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 21.0629 ms
+2025-08-22 23:18:33.864 +03:00 [INF] HTTP GET /GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 32277.1952 ms
+2025-08-22 23:20:20.925 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:20:21.465 +03:00 [INF] HTTP GET /api/Product responded 200 in 570.0465 ms
+2025-08-22 23:20:27.204 +03:00 [INF] HTTP GET /api/Product/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 828.2045 ms
+2025-08-22 23:20:37.625 +03:00 [INF] HTTP GET /GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 4398.4996 ms
+2025-08-22 23:20:52.216 +03:00 [INF] HTTP GET /GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 11906.9382 ms
+2025-08-22 23:21:01.590 +03:00 [INF] HTTP GET /GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 7380.6730 ms
+2025-08-22 23:23:05.355 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:23:05.677 +03:00 [INF] HTTP GET /api/Product responded 200 in 340.0232 ms
+2025-08-22 23:23:20.106 +03:00 [INF] HTTP GET /GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 4187.4481 ms
+2025-08-22 23:25:25.872 +03:00 [INF] HTTP GET /api/Category responded 200 in 90.9579 ms
+2025-08-22 23:25:25.890 +03:00 [INF] HTTP GET /api/Category responded 200 in 16.1982 ms
+2025-08-22 23:25:25.900 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 119.0001 ms
+2025-08-22 23:25:25.911 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 9.4494 ms
+2025-08-22 23:25:26.213 +03:00 [INF] HTTP GET /api/Category responded 200 in 16.1098 ms
+2025-08-22 23:25:26.216 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 19.0547 ms
+2025-08-22 23:25:27.828 +03:00 [INF] HTTP GET /api/Product/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 404 in 0.0507 ms
+2025-08-22 23:25:40.306 +03:00 [INF] HTTP GET /api/Product/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 404 in 0.0043 ms
+2025-08-22 23:26:57.299 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:26:57.299 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:26:57.688 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 412.1659 ms
+2025-08-22 23:26:57.688 +03:00 [INF] HTTP GET /api/Category responded 200 in 410.8973 ms
+2025-08-22 23:26:57.753 +03:00 [INF] HTTP GET /api/Category responded 200 in 61.5976 ms
+2025-08-22 23:26:57.753 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 61.6053 ms
+2025-08-22 23:26:57.774 +03:00 [INF] HTTP GET /api/Category responded 200 in 18.9696 ms
+2025-08-22 23:26:57.777 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 21.8800 ms
+2025-08-22 23:26:59.213 +03:00 [INF] HTTP GET /api/Product/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 404 in 0.0711 ms
+2025-08-22 23:27:12.022 +03:00 [INF] HTTP GET /api/Product/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 404 in 0.0046 ms
+2025-08-22 23:27:14.917 +03:00 [INF] HTTP GET /api/Product/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 404 in 0.0060 ms
+2025-08-22 23:27:27.693 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 4798.4355 ms
+2025-08-22 23:29:14.621 +03:00 [INF] HTTP GET /api/Category responded 200 in 26.0090 ms
+2025-08-22 23:29:14.623 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 28.3451 ms
+2025-08-22 23:29:16.535 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 50.7839 ms
+2025-08-22 23:31:48.388 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 45.5964 ms
+2025-08-22 23:31:48.391 +03:00 [INF] HTTP GET /api/Category responded 200 in 48.8053 ms
+2025-08-22 23:31:50.254 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 26.5961 ms
+2025-08-22 23:31:56.748 +03:00 [INF] HTTP GET /api/Category responded 200 in 28.6579 ms
+2025-08-22 23:31:56.748 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 28.8043 ms
+2025-08-22 23:31:58.338 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 8.3761 ms
+2025-08-22 23:32:04.515 +03:00 [INF] HTTP GET /api/images/1e09a936-f6ac-401a-81ef-31e8f1c06a56_product-1.jpg responded 404 in 0.0029 ms
+2025-08-22 23:32:57.712 +03:00 [INF] HTTP GET /api/Category responded 200 in 30.6926 ms
+2025-08-22 23:32:57.712 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 30.8141 ms
+2025-08-22 23:33:00.415 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 36.8097 ms
+2025-08-22 23:33:54.398 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:33:54.398 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:33:55.017 +03:00 [INF] HTTP GET /api/Category responded 200 in 659.5868 ms
+2025-08-22 23:33:55.017 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 661.4837 ms
+2025-08-22 23:33:55.051 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 30.3639 ms
+2025-08-22 23:33:55.051 +03:00 [INF] HTTP GET /api/Category responded 200 in 30.3931 ms
+2025-08-22 23:33:55.079 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 24.7697 ms
+2025-08-22 23:33:55.079 +03:00 [INF] HTTP GET /api/Category responded 200 in 24.9371 ms
+2025-08-22 23:33:56.943 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 404 in 0.1169 ms
+2025-08-22 23:34:11.408 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 404 in 0.0073 ms
+2025-08-22 23:34:46.829 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:34:46.829 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:34:47.373 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 574.3697 ms
+2025-08-22 23:34:47.373 +03:00 [INF] HTTP GET /api/Category responded 200 in 572.9959 ms
+2025-08-22 23:34:47.400 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 23.2284 ms
+2025-08-22 23:34:47.400 +03:00 [INF] HTTP GET /api/Category responded 200 in 23.7967 ms
+2025-08-22 23:34:47.424 +03:00 [INF] HTTP GET /api/Category responded 200 in 21.4620 ms
+2025-08-22 23:34:47.428 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 25.6376 ms
+2025-08-22 23:34:50.134 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 1448.7442 ms
+2025-08-22 23:38:47.827 +03:00 [INF] HTTP GET /api/Category responded 200 in 38.3597 ms
+2025-08-22 23:38:48.043 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 254.5034 ms
+2025-08-22 23:38:52.475 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 24.4503 ms
+2025-08-22 23:38:52.633 +03:00 [INF] HTTP GET /images/1e09a936-f6ac-401a-81ef-31e8f1c06a56_product-1.jpg responded 404 in 0.1631 ms
+2025-08-22 23:38:56.948 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 5.4239 ms
+2025-08-22 23:38:56.998 +03:00 [INF] HTTP GET /images/1e09a936-f6ac-401a-81ef-31e8f1c06a56_product-1.jpg responded 404 in 0.0030 ms
+2025-08-22 23:39:57.165 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 29.4735 ms
+2025-08-22 23:39:57.170 +03:00 [INF] HTTP GET /api/Category responded 200 in 32.1671 ms
+2025-08-22 23:39:59.067 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 67.5741 ms
+2025-08-22 23:40:50.680 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 18.7823 ms
+2025-08-22 23:40:50.710 +03:00 [INF] HTTP GET /api/Category responded 200 in 49.0238 ms
+2025-08-22 23:40:53.885 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 23.2109 ms
+2025-08-22 23:40:53.890 +03:00 [INF] HTTP GET /api/Category responded 200 in 28.1292 ms
+2025-08-22 23:40:55.393 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 4.3377 ms
+2025-08-22 23:40:55.499 +03:00 [INF] HTTP GET /images/1e09a936-f6ac-401a-81ef-31e8f1c06a56_product-1.jpg responded 404 in 0.0026 ms
+2025-08-22 23:41:50.626 +03:00 [INF] HTTP GET /api/Category responded 200 in 15.0711 ms
+2025-08-22 23:41:50.628 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 16.9096 ms
+2025-08-22 23:41:50.659 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 30.1774 ms
+2025-08-22 23:41:50.662 +03:00 [INF] HTTP GET /api/Category responded 200 in 34.4050 ms
+2025-08-22 23:41:51.117 +03:00 [INF] HTTP GET /api/Category responded 200 in 10.7830 ms
+2025-08-22 23:41:51.120 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 13.7238 ms
+2025-08-22 23:41:53.139 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 4.6725 ms
+2025-08-22 23:41:53.246 +03:00 [INF] HTTP GET /images/1e09a936-f6ac-401a-81ef-31e8f1c06a56_product-1.jpg responded 404 in 0.0026 ms
+2025-08-22 23:45:33.747 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:45:33.747 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:45:34.425 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 716.0720 ms
+2025-08-22 23:45:34.425 +03:00 [INF] HTTP GET /api/Category responded 200 in 715.2260 ms
+2025-08-22 23:45:34.467 +03:00 [INF] HTTP GET /api/Category responded 200 in 39.1927 ms
+2025-08-22 23:45:34.470 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 42.1025 ms
+2025-08-22 23:45:34.493 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 21.5419 ms
+2025-08-22 23:45:34.494 +03:00 [INF] HTTP GET /api/Category responded 200 in 22.3830 ms
+2025-08-22 23:45:38.570 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 1723.5568 ms
+2025-08-22 23:45:42.438 +03:00 [INF] HTTP POST /api/products/0dabbe6f-5061-46ac-81da-5888df2836a2/images responded 200 in 380.4131 ms
+2025-08-22 23:45:42.463 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 14.2879 ms
+2025-08-22 23:45:42.465 +03:00 [INF] HTTP GET /api/Category responded 200 in 16.8495 ms
+2025-08-22 23:45:44.353 +03:00 [INF] HTTP GET /api/GetProductImages/0dabbe6f-5061-46ac-81da-5888df2836a2 responded 200 in 27.5899 ms
+2025-08-22 23:46:11.524 +03:00 [INF] HTTP POST /api/Product responded 200 in 3657.6594 ms
+2025-08-22 23:46:16.562 +03:00 [INF] HTTP GET /api/Category responded 200 in 40.5621 ms
+2025-08-22 23:46:16.562 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 40.5353 ms
+2025-08-22 23:46:29.102 +03:00 [INF] HTTP GET /api/Category responded 200 in 28.7864 ms
+2025-08-22 23:46:29.102 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 28.7915 ms
+2025-08-22 23:47:06.671 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 14.9088 ms
+2025-08-22 23:47:06.681 +03:00 [INF] HTTP GET /api/Category responded 200 in 25.0057 ms
+2025-08-22 23:48:10.814 +03:00 [INF] HTTP GET /api/Category responded 200 in 5510.6974 ms
+2025-08-22 23:48:23.686 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 18382.8619 ms
+2025-08-22 23:51:59.394 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:51:59.393 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:52:01.657 +03:00 [INF] HTTP GET /api/Category responded 200 in 2289.2364 ms
+2025-08-22 23:52:01.680 +03:00 [INF] HTTP GET /api/Category responded 200 in 18.6598 ms
+2025-08-22 23:52:01.700 +03:00 [INF] HTTP GET /api/Category responded 200 in 18.0334 ms
+2025-08-22 23:52:03.393 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 4027.9324 ms
+2025-08-22 23:52:05.269 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 1873.4003 ms
+2025-08-22 23:52:05.297 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 23.8730 ms
+2025-08-22 23:52:09.206 +03:00 [INF] HTTP GET /api/GetProductImages/1848d907-cfb7-4f77-ba10-f9a437c8d8d7 responded 200 in 62.8368 ms
+2025-08-22 23:52:13.551 +03:00 [INF] HTTP DELETE /api/Product/1848d907-cfb7-4f77-ba10-f9a437c8d8d7 responded 200 in 88.0191 ms
+2025-08-22 23:52:15.896 +03:00 [INF] HTTP GET /api/Category responded 200 in 11.3973 ms
+2025-08-22 23:52:15.897 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 12.2488 ms
+2025-08-22 23:52:51.826 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 24.2849 ms
+2025-08-22 23:52:51.827 +03:00 [INF] HTTP GET /api/Category responded 200 in 25.3900 ms
+2025-08-22 23:56:07.188 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:56:07.188 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:56:07.709 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 534.6897 ms
+2025-08-22 23:56:07.730 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 17.4342 ms
+2025-08-22 23:56:07.739 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 6.7331 ms
+2025-08-22 23:56:08.953 +03:00 [INF] HTTP GET /api/Category responded 200 in 1780.8188 ms
+2025-08-22 23:56:08.965 +03:00 [INF] HTTP GET /api/Category responded 200 in 6.8843 ms
+2025-08-22 23:56:08.977 +03:00 [INF] HTTP GET /api/Category responded 200 in 9.6485 ms
+2025-08-22 23:56:46.623 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:56:46.624 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:56:46.992 +03:00 [INF] HTTP GET /api/Category responded 200 in 382.8575 ms
+2025-08-22 23:56:46.993 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 386.2971 ms
+2025-08-22 23:56:47.002 +03:00 [INF] HTTP GET /api/Category responded 200 in 6.9267 ms
+2025-08-22 23:56:47.002 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 6.7988 ms
+2025-08-22 23:56:47.017 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 12.5955 ms
+2025-08-22 23:56:47.014 +03:00 [INF] HTTP GET /api/Category responded 200 in 9.5876 ms
+2025-08-22 23:56:51.036 +03:00 [INF] HTTP GET /api/Category responded 200 in 3.6569 ms
+2025-08-22 23:56:51.040 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 2.7430 ms
+2025-08-22 23:57:42.945 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:57:42.945 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-22 23:57:43.352 +03:00 [INF] HTTP GET /api/Category responded 200 in 421.0951 ms
+2025-08-22 23:57:43.352 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 422.4765 ms
+2025-08-22 23:57:43.371 +03:00 [INF] HTTP GET /api/Category responded 200 in 12.0659 ms
+2025-08-22 23:57:43.371 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 12.0305 ms
+2025-08-22 23:57:43.396 +03:00 [INF] HTTP GET /api/Category responded 200 in 13.7332 ms
+2025-08-22 23:57:43.396 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 12.3311 ms
+2025-08-22 23:58:26.038 +03:00 [INF] HTTP GET /api/Category responded 200 in 2053.7852 ms
+2025-08-22 23:58:47.565 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 23580.5693 ms
+2025-08-22 23:59:11.001 +03:00 [INF] HTTP POST /api/Product responded 200 in 5451.3929 ms
+2025-08-22 23:59:14.330 +03:00 [INF] HTTP GET /api/Category responded 200 in 2.8919 ms
+2025-08-22 23:59:22.927 +03:00 [INF] HTTP GET /api/Product/filter responded 200 in 8599.8692 ms

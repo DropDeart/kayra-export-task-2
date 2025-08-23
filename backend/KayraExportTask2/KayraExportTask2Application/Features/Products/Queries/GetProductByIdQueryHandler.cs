@@ -1,4 +1,5 @@
 ﻿using KayraExportTask2Application.DTOs.ProductDTOs;
+using KayraExportTask2Application.DTOs.ProductImageDTOs;
 using KayraExportTask2Application.Interfaces;
 using KayraExportTask2Application.Repositories;
 using KayraExportTask2Domain.Configurations;
@@ -51,6 +52,16 @@ namespace KayraExportTask2Application.Features.Products.Queries
                 Description = product.Description,
                 Price = product.Price,
                 Slug = product.Slug,
+                CategoryId = product.CategoryId,
+                ProductImages = product.Images != null
+                ? product.Images.Select(pi => new ProductImageDto
+                {
+                    Id = pi.Id,
+                    FileName = pi.FileName,
+                    FilePath = pi.FilePath,
+                    IsMain = pi.IsMain
+                }).ToList()
+                : new List<ProductImageDto>()
             };
 
             await _cacheService.SetAsync(cacheKey, productDto, TimeSpan.FromMinutes(15));

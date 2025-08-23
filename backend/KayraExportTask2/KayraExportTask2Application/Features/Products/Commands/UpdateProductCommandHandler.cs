@@ -41,7 +41,7 @@ namespace KayraExportTask2Application.Features.Products.Commands
             productToUpdate.UpdatedTime = DateTime.UtcNow;
 
             await _cacheService.RemoveAsync($"product:{request.Id}");
-            await _cacheService.RemoveAsync("allproducts");
+            await _cacheService.RemoveAllAsync("products:filtered");
             _writeRepositories.Update(productToUpdate);
             await _writeRepositories.SaveAsync();
 

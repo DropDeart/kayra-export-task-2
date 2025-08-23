@@ -1,4 +1,4 @@
-using KayraExportTask2API.Middlewares;
+﻿using KayraExportTask2API.Middlewares;
 using KayraExportTask2Application.Interfaces;
 using KayraExportTask2Application.Repositories;
 using KayraExportTask2Infrastructor.Services;
@@ -13,6 +13,7 @@ using Serilog;
 using MediatR;
 using System.Reflection;
 using StackExchange.Redis;
+using Microsoft.Extensions.FileProviders; // ✅ Bu satırı ekliyoruz
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,13 +24,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 //MediatR 
 var applicationAssembly = typeof(KayraExportTask2Application.Interfaces.IAuthService).Assembly;
-
-// MediatR'a hem API hem de Application assembly'lerini bir dizi olarak iletiyoruz
 builder.Services.AddMediatR(cfg =>
 {
     cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly, applicationAssembly);
 });
-;
 
 
 //Redis
@@ -110,7 +108,7 @@ builder.Host.UseSerilog((context, loggerConfig) =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy",
-        builder => builder.WithOrigins("http://localhost:3000") 
+        builder => builder.WithOrigins("http://localhost:3000")
         .AllowAnyMethod()
         .AllowAnyHeader()
         .AllowCredentials());
@@ -126,6 +124,21 @@ if (app.Environment.IsDevelopment())
 app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+
+var imagesPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images");
+if (!Directory.Exists(imagesPath))
+{
+    Directory.CreateDirectory(imagesPath);
+}
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(imagesPath),
+    RequestPath = "/images"
+});
+
 
 app.UseAuthentication();
 app.UseAuthorization();

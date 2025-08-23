@@ -18,8 +18,4 @@
     <ProjectReference Include="..\KayraExportTask2Domain\KayraExportTask2Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Productİmages\Queries\" />
-  </ItemGroup>
-
 </Project>

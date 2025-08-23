@@ -1,46 +1,116 @@
-##🛍️ Full Stack E-Commerce — 2. Aşama Task
+# 🛒 E-Ticaret Projesi Kayra Export Task -2
 
-#Bu proje, .NET 7 (Onion Architecture + CQRS + Redis Cache) tabanlı bir backend ile, Next.js 15 (App Router) + NextAuth + RTK + Tailwind + shadcn tabanlı bir frontend’den oluşan tam kapsamlı bir e-ticaret uygulamasıdır.
+Bu proje, **.NET 7 (Backend)** ve **Next.js 15 (Frontend)** teknolojileri kullanılarak geliştirilmiş, **Onion Architecture** tabanlı bir e-ticaret uygulamasıdır. Projede **CQRS + MediatR**, **role-based authentication**, **PostgreSQL + Redis (Docker Compose)**, **Formik & Yup validasyon**, **shadcn UI**, **dropzone entegrasyonu** ve daha birçok modern teknoloji entegre edilmiştir.
 
-##🚀 Proje Hedefi
-JWT tabanlı kimlik doğrulama (login/register)
-Redis cache destekli performanslı ürün servisi
-Çok dilli, SEO uyumlu, filtrelenebilir e-ticaret frontend’i
-Role tabanlı admin panel (CRUD) ve kullanıcı tarafı alışveriş deneyimi
+---
 
-##🛠️ Teknolojiler
-#Backend
-.NET 7 — Onion Architecture (Core / Application / Infrastructure / API)
-CQRS + MediatR — Command/Query ayrımı
-PostgreSQL + Redis (docker-compose ile aynı anda ayağa kalkıyor)
-JWT Authentication — Kullanıcı giriş/kayıt için
-Serilog — Loglama
-Global Exception Middleware — Merkezi hata yönetimi
+## 🚀 Teknolojiler
 
-#Frontend
-Next.js 15 — App Router yapısı
-TypeScript + TailwindCSS
-NextAuth — Session & JWT tabanlı auth
-RTK (Redux Toolkit) — Global state (sepet yönetimi)
-Formik + Yup — Form validasyonu
-shadcn/ui — UI bileşenleri
-Dropzone — Ürün resmi yükleme
-next-intl — Çok dilli yapı (entegrasyon hazırlandı fakat tamamlanamadı)
-Custom SEO MetaTags — Ürün detay sayfalarında dinamik meta etiketler
+### Backend
+- **.NET 7**
+- **Onion Architecture**
+- **MediatR** ile **CQRS Pattern**
+- **Generic Repository**
+- **PostgreSQL** (Docker ile)
+- **Redis** (Docker ile)
+- **Serilog** (Logging)
+- **Global Middleware Error Handling**
 
-##🔑 Özellikler
-#Backend
+### Frontend
+- **Next.js 15**
+- **NextAuth** (Session & Token Management - Email Credential Provider)
+- **Formik & Yup** (Form validasyonu)
+- **shadcn UI** (UI bileşenleri)
+- **RTK (Redux Toolkit)** (Sepet yönetimi)
+- **Dropzone** (Ürün resimleri yükleme)
+- **TanStack Table** (Listeleme & Filtreleme)
+- **Slug tabanlı ürün detay sayfası**
+- **Custom SEO meta tags**
+- **next-intl** (Çok dil desteği, süre yetmediği için tamamlanamadı)
 
-Kullanıcı kayıt/login (JWT üretimi)
-Ürün ekleme/güncelleme/silme (Command’lar)
-Ürün listeleme (Query + Redis cache ile hızlandırma)
-Cache invalidation (ürün eklendiğinde/güncellendiğinde)
+---
 
-#Frontend
-Login/Register (NextAuth + Backend API)
-Role tabanlı Admin Panel (CRUD)
-Filtreleme & sıralama (fiyat, kategori)
-Dinamik ürün detay sayfaları (/products/[slug])
-Sepet (RTK store ile)
-Çoklu dil altyapısı (hazırlandı, tamamlanmadı)
-SEO optimizasyonu (SSR/ISR + dinamik meta etiketler)
+## 🏗️ Proje Özellikleri
+
+### Backend
+- **CQRS ve MediatR** ile temiz komut/sorgu yapısı
+- **Generic Repository** ile veri erişim soyutlaması
+- **PostgreSQL** ana veritabanı
+- **Redis** ile caching & session management
+- **Serilog** ile loglama
+- **Global Exception Middleware** ile hata yakalama
+
+### Frontend
+- **Role-based Admin Panel**
+  - CRUD işlemleri
+  - Filtreleme ve sıralama
+- **User tarafı**
+  - Ürün listeleme
+  - Sepet yönetimi (RTK store)
+  - Slug tabanlı ürün detay sayfası
+- **Form Yönetimi**
+  - Formik + Yup entegrasyonu
+  - Dropzone ile çoklu görsel yükleme
+- **UI**
+  - shadcn bileşenleri ile modern ve esnek UI
+- **SEO**
+  - Custom meta tag fonksiyonu
+- **Çok dil desteği**
+  - next-intl (tamamlanamadı)
+
+---
+
+## 📂 Klasör Yapısı
+
+### Backend
+Backend/
+│── src/
+│ ├── Core/
+│ ├── Application/
+│ ├── Infrastructure/
+│ ├── Persistence/
+│ ├── API/
+│── docker-compose.yml
+
+###Frontend
+Frontend/
+│── app/
+│ ├── (auth)/
+│ ├── (admin)/
+│ ├── (user)/
+│── components/
+│── hooks/
+│── services/
+│── store/
+│── providers/
+│── next.config.js
+│── package.json
+
+--
+
+## ⚙️ Kurulum ve Çalıştırma
+
+### 1. Gereksinimler
+- **Docker & Docker Compose**
+- **Node.js 20+**
+- **.NET 7 SDK**
+
+### 2. Backend Çalıştırma
+```bash
+cd Backend
+docker-compose up -d
+dotnet restore
+dotnet build
+dotnet run 
+```
+
+DB'için Persistance katmanında migration için nuGet Package Manager Consol'u çalıştırın 
+```bash
+Update-Database
+```
+
+### 3. Frontend Çalıştırma
+```bash
+npm install
+npm run dev
+```

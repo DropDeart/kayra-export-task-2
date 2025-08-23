@@ -1,11 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { configureStore } from "@reduxjs/toolkit";
-
-const dummyReducer = (state = {}, action: any) => state;
+import cartReducer from "./cartSlice";
 
 export const store = configureStore({
   reducer: {
-    dummy: dummyReducer,
+    cart: cartReducer,
   },
 });
 

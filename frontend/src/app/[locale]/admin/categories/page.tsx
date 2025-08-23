@@ -84,7 +84,6 @@ export default function CategoryPage() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-32">
-              {/* ✅ Düzeltme: handleEdit'in çağrısı değiştirilmedi, fonksiyonun kendisi güncellendi */}
               <DropdownMenuItem onClick={() => handleEdit(row.original)}>
                 <div className="flex items-center"> 
                   <EditIcon className="mr-2 h-4 w-4" />
@@ -130,13 +129,9 @@ export default function CategoryPage() {
       } catch (err: any) {
         toast.error(err.message || "Kategori eklenirken bir hata oluştu");
       }
-    }
-    
-    // ✅ Düzeltme: handleEdit fonksiyonu artık API'ye GET isteği göndermiyor.
-    // Bunun yerine, `data` listesi içinden ilgili kategori bulunup state'e atanıyor.
+    }   
+
     async function handleEdit(category: Category) {
-      // API'ye yeniden istek atmak yerine, elimizdeki veriyi kullanıyoruz.
-      // Bu sayede 405 Method Not Allowed hatası almayız.
       setSelectedCategory(category);
       setIsEditOpen(true);
     }
@@ -279,9 +274,7 @@ export default function CategoryPage() {
       </div>
     )
   }
-
-// ... Diğer bileşenler (NewCategoryForm, FormikUpdateCategory, ConfirmDeleteDialog) aynı kalır
-// Değişiklik sadece CategoryPage ana bileşeninde yapıldı.
+  
 interface NewCategoryFormProps {
   onSubmit: (p: NewCategory) => void;
 }

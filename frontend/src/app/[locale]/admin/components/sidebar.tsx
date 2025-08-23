@@ -45,7 +45,7 @@ export function Sidebar() {
   useEffect(() => {
     if (status === "unauthenticated") {
       toast.error("Oturumunuz sonlanmıştır, lütfen giriş yapınız.");
-      router.push("/giris-yap");
+      router.push("/");
     }
   }, [status, router])
 

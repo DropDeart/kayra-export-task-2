@@ -1,0 +1,44 @@
+{
+  "ProductsPage":{
+    "productLoadingError" : "An error occurred while loading products.",
+    "products":"Products",
+    "productSearch":"Product Search...",
+    "filters":"Filters",
+    "nextPage":"Next",
+    "beforePage":"Before",
+    "page":"Page"    
+  },
+  "ProductPage": {
+    "productNotFound": "Product not found.",
+    "pageTitle": "Product Page",
+    "productNamePrefix": "Product Name: ",
+    "productDescriptionPrefix": "Product Description: "
+  },
+  "ProductDetailClient": {
+    "quantity": "Quantity",
+    "addToCart": "Add to Cart"
+  },
+  "CartSidebar":{
+    "cart":"Cart",
+    "emptyCart":"Cart is empty",
+    "total":"Total",
+    "payToCart":"Payment",
+    "clearToCart":"Clear Cart"
+  },
+  "FilterSidebar":{
+    "filters": "Filters",
+    "amountRange": "Amount Range",
+    "minAmount": "Min Amount",
+    "maxAmount": "Max Amount",
+    "order": "Order",
+    "notSelected" : "Not Selected",
+    "orderAsc" : "Oder By Asc",
+    "orderDesc" : "Order By Desc",
+    "cleanFilter" : "Clear",
+    "send" : "Send"
+  },
+    "ProductGrid":{
+    "productLoading" : "Products Loading ...",
+    "productsNotFound" : "Products not found."
+  }
+}

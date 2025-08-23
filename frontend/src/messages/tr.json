@@ -1,0 +1,44 @@
+{
+  "ProductsPage":{
+    "productLoadingError" : "Ürünler yüklenirken bir hata oluştu.",
+    "products":"Ürünler",
+    "productSearch":"Ürün ara...",
+    "filters":"Filtrele",
+    "nextPage":"Sonraki",
+    "beforePage":"Önceki",
+    "page":"Sayfa"    
+  },
+  "ProductPage": {
+    "productNotFound": "Ürün bulunamadı.",
+    "pageTitle": "Ürün Sayfası",
+    "productNamePrefix": "Ürün Adı: ",
+    "productDescriptionPrefix": "Ürün Açıklaması: "
+  },
+  "ProductDetailClient": {
+    "quantity": "Adet",
+    "addToCart": "Sepete Ekle"
+  },
+  "CartSidebar":{
+    "cart":"Sepet",
+    "emptyCart":"Sepetiniz boş",
+    "total":"Toplam",
+    "payToCart":"Ödeme Yap",
+    "clearToCart":"Sepeti Temizle"
+  },
+  "FilterSidebar":{
+    "filters": "Filtreler",
+    "amountRange": "Fiyat Aralığı",
+    "minAmount": "Min Fiyat",
+    "maxAmount": "Max Fiyat",
+    "order": "Sıralama",
+    "notSelected" : "Seçim yok",
+    "orderAsc" : "Fiyata Göre Artan",
+    "orderDesc" : "Fiyata Göre Azalan",
+    "cleanFilter" : "Filtreyi Temizle",
+    "send" : "Uygula"
+  },
+  "ProductGrid":{
+    "productLoading" : "Ürünler Yükleniyor ...",
+    "productsNotFound" : "Gösterilecek ürün bulunamadı."
+  }
+}

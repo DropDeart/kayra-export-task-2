@@ -1,8 +1,10 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+// app/layout.tsx
 import './globals.css';
 import 'react-toastify/dist/ReactToastify.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
+// providers.ts dosyasını içe aktarın
 import Providers from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
